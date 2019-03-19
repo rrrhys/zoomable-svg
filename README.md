@@ -1,6 +1,14 @@
 # ZoomableSvg
 Pinch to pan-n-zoom react-native-svg components using a render prop.
 
+-------
+
+Based on https://github.com/msand/zoomable-svg library.
+
+Modified to attach a simple decay animation to scrolling, and a spring animation to zoom.
+
+-------
+
 [Advanced Example: InfiniDraw](https://github.com/msand/InfiniDraw/)
 Universal svg drawing with pan and zoom. Builds on [Next.js](https://github.com/zeit/next.js/) and [react-native-web](https://github.com/necolas/react-native-web) for the web version, and [react-native](https://github.com/facebook/react-native/) for native apps.
 Uses [react-native-svg](https://github.com/react-native-community/react-native-svg/) on native, [svgs](https://github.com/godaddy/svgs) for the web, and [zoomable-svg](https://github.com/msand/zoomable-svg) in both.
