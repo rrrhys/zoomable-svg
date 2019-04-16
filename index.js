@@ -487,11 +487,20 @@ class ZoomableSvg extends Component {
         top,
       };
 
+      requestAnimationFrame(() => {
       Animated.spring(animatingZoom, {
         toValue: zoom,
         tension: 40
       }).start();
+      Animated.spring(animatingXY, {
+        toValue: {
+          x: left,
+          y: top
+        },
+        tension: 40
+      }).start();
 
+      })
       this.setState(constrain ? this.constrainExtent(nextState) : nextState);
     }
   }
@@ -519,7 +528,6 @@ class ZoomableSvg extends Component {
         top: initialTop + dy,
         zoom,
       };
-
       Animated.decay(animatingXY,
         {toValue: {x: nextState.left, y: nextState.top}, velocity: {x: vx, y: vy}, deceleration: 0.995}).start();
 
