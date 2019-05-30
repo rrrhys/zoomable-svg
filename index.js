@@ -10,6 +10,7 @@ const { Component } = React;
 // Based on https://gist.github.com/evgen3188/db996abf89e2105c35091a3807b7311d
 
 
+let runningAnimation = false;
 let animatingXY: Animated.ValueXY;
 let animatingZoom: Animated.Value;
 
@@ -530,7 +531,6 @@ class ZoomableSvg extends Component {
       };
       
       if(runningAnimation){
-        console.log("Stop last");
         runningAnimation.stop();
       }
 
